@@ -1,0 +1,21 @@
+{
+  "name": "48r/php-orm",
+  "description": "A basic lightweight PDO based ORM for PHP",
+  "license": "MIT",
+  "keywords": ["Orm", "PHP", "PDO", "lightweight"],
+  "authors": [
+    {  
+      "name": "48Rotations",
+      "email": "hello@48rotations.com"  
+    }  
+  ],  
+  "require": {},
+  "require-dev": {
+    "phpunit/phpunit": "^7"
+  },
+  "autoload": {
+    "psr-4": {
+      "": "src"
+    }
+  }
+}

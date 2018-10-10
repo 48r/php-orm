@@ -32,6 +32,8 @@ jobs:
           paths:
             - ./vendor
           key: v1-dependencies-{{ checksum "composer.json" }}
-        
+
+      - run: sudo docker-php-ext-install pdo_mysql
+
       # run tests!
       - run: vendor/bin/phpunit

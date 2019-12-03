@@ -137,7 +137,7 @@
     private function execModel(string $sql) {
       list(, $from) = explode('from ', strtolower($sql), 2);
       list($table) = explode(' ', trim($from), 2);
-      return ucfirst(trim($table, '`'));
+      return '\\'. ucfirst(trim($table, "`\r\n"));
     }
 
 		public function find() {

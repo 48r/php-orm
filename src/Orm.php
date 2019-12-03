@@ -106,7 +106,7 @@
     }
 
     private function execIsFetch(string $sql) {
-      list($type) = explode(' ', $sql);
+      list($type) = explode(' ', $sql, 2);
       switch(strtolower($type)) {
         case 'select':
           return true;
@@ -115,7 +115,7 @@
     }
 
     private function execIsUpdate(string $sql) {
-      list($type) = explode(' ', $sql);
+      list($type) = explode(' ', $sql, 2);
       switch(strtolower($type)) {
         case 'update':
         case 'delete':

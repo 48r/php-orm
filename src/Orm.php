@@ -141,7 +141,14 @@
     }
 
 		public function find() {
-      $this->select();
+      if(!isset($this->components['insert'])) {
+        $this->select(strtolower(get_called_class()));
+      }
+
+      if(!isset($this->components['from'])) {
+        $this->from(strtolower(get_called_class()));
+      }
+
 			return $this->exec();
     }
     

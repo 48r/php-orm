@@ -17,7 +17,15 @@
       }
     }
 
-    private static function sortComponents(array $components) {
+    public function sql() {
+      return implode(' ', $this->parsed);
+    }
+
+    public static function parse(\Orm $orm, array $args) {
+      throw new \OrmBuilderParserNotImplementedException('Should implement own parse method for component');
+    }
+
+    private static function sortComponents(array $components) : array {
       uksort($components, function($a, $b){
         $values = [
           'select' => 0,
@@ -53,11 +61,4 @@
       return $components;
     }
 
-    public function sql() {
-      return implode(' ', $this->parsed);
-    }
-
-    public static function parse(\Orm $orm, array $args) {
-      throw new \OrmBuilderParserNotImplementedException('Should implement own parse method for component');
-    }
   }

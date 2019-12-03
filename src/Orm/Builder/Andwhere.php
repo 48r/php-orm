@@ -4,4 +4,8 @@
 
   class Andwhere extends \Orm\Builder\Where {
       
+    public static function parse(\Orm $orm, array $args) {
+      $where = parent::parse($orm, $args);
+      return self::$delimiter . implode(substr($where, 4));
+    }
   }

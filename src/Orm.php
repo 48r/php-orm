@@ -149,7 +149,7 @@
         $this->from(strtolower(get_called_class()));
       }
 
-      if(!isset($this->components['where']) && size($this->variables()) > 0) {
+      if(!isset($this->components['where']) && sizeof($this->variables()) > 0) {
         $this->where($this->variables());
       }
 

@@ -48,13 +48,13 @@
           'innerJoin' => 2,
           'on' => 2,
           'where' => 3,
-          'andWhere' => 3,
-          'orWhere' => 3,
-          'groupBy' => 4,
-          'having' => 5,
-          'orderBy' => 6,
-          'limit' => 7,
-          'offset' => 8
+          'andWhere' => 4,
+          'orWhere' => 4,
+          'groupBy' => 5,
+          'having' => 6,
+          'orderBy' => 7,
+          'limit' => 8,
+          'offset' => 9
         ];
         return $values[$a] <=> $values[$b];
       });

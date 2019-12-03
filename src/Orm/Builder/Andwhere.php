@@ -6,6 +6,6 @@
       
     public static function parse(\Orm $orm, array $args) {
       $where = parent::parse($orm, $args);
-      return self::$delimiter . substr($where, 4);
+      return self::$delimiter . substr($where, 5);
     }
   }
